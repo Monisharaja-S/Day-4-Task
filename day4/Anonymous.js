@@ -75,3 +75,57 @@ var pal=function(a){
     } return b;
 };
 pal(["malayalam","racer","radar","12341","madam","23432"]); 
+
+//Return the median of two sorted arrays of the same size
+console.log("Q6.Median of sorted array of same size:")
+var Median = function(arr1, arr2){
+    var sortedArr = [...arr1, ...arr2].sort((a, b) => a - b);
+    var mid = Math.floor(sortedArr.length / 2);
+  
+    return sortedArr.length % 2 === 0
+      ? (sortedArr[mid - 1] + sortedArr[mid]) / 2
+      : sortedArr[mid];
+  };
+  var arr1 = [1, 3, 5];
+  var arr2 = [2, 4, 6];
+  
+  var result=Median(arr1, arr2);
+  console.log("Median:",+result);
+
+
+// Remove duplicates from an array
+console.log("Q7.New array is:");
+var array=function(arr)
+{
+    let A = [];
+    for(let i of arr) 
+    {
+        if(A.indexOf(i) === -1)
+        {
+            A.push(i);
+        }
+    }
+    console.log(A);
+};
+array([1,2,1,4,6,1,4,"hi","hello","hi"]);
+
+//rotate an array by k times
+console.log("Q8.Rotate an array by K times:")
+var rotated =[];
+var rotate = function(arr, k)
+{
+  var n = arr.length;
+  k = k % n;
+  rotated= [...arr.slice(k), ...arr.slice(0, k)];
+ 
+  return rotated;
+};
+var Array = [1, 2, 3, 4, 5];
+var k =3;
+
+rotated = rotate(Array, k);
+console.log("Array:", Array);
+console.log("Rotated Array:",rotated);
+
+
+
