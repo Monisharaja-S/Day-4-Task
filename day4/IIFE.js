@@ -73,3 +73,49 @@ console.log("Q5.Palindromes in an array are:");
 })
 (["malayalam","racer","radar","12341","madam","23432"]); 
 
+//Return the median of two sorted arrays of the same size
+console.log("Q6.Median of sorted array:");
+var arr1 = [1, 3, 5];
+var arr2 = [2, 4, 6];
+(function median(arr1, arr2){
+    var sortedArr = [...arr1, ...arr2].sort((a, b) => a - b);
+    var mid = Math.floor(sortedArr.length / 2);
+  
+    return console.log(sortedArr.length % 2 === 0
+      ? (sortedArr[mid - 1] + sortedArr[mid]) / 2
+      : sortedArr[mid]);
+  })
+(arr1, arr2);
+
+// Remove duplicates from an array
+console.log("Q7.New array is:");
+(function(arr)
+{
+    let A = [];
+    for(let i of arr) 
+    {
+        if(A.indexOf(i) === -1)
+        {
+            A.push(i);
+        }
+    }
+    console.log(A);
+})
+([5,6,4,"year",5,3,6,"year","day"]);
+
+
+//rotate an array by k times
+console.log("Q8.Rotate an array by K times:")
+var num = [1, 2, 3, 4, 5];
+var k =3;
+(function(arr, k)
+{
+  var n = arr.length;
+  k = k % n;
+  var rotated = [...arr.slice(k), ...arr.slice(0, k)];
+ console.log(rotated);
+})
+(num, k);
+
+
+
